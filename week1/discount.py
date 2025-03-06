@@ -10,6 +10,12 @@ day_of_week = current_date_and_time.weekday()
 
 subtotal = float(input("Please enter the subtotal: "))
 
+# stretch 1
+add_purchase = 50 - subtotal
+
+if subtotal < 50:
+  print(f"Your subtotal is {subtotal}. To get a 10% discount on a Tuesday or a Wednesday, please make an additional purchase of over ${add_purchase}.")
+
 discount = 0
 
 if (day_of_week == 1 or day_of_week == 2) and subtotal >= 50:
