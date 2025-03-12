@@ -1,10 +1,12 @@
 import random
 
 def main():
-  quantity = random.choice([1,2])
-  tense = random.choice(["past", "present", "future"])
-  sentence = make_sentence(quantity, tense)
-  print(sentence.capitalize())
+  print(make_sentence(1, "past").capitalize())
+  print(make_sentence(1, "present").capitalize())
+  print(make_sentence(1, "future").capitalize())
+  print(make_sentence(2, "past").capitalize())
+  print(make_sentence(2, "present").capitalize())
+  print(make_sentence(2, "future").capitalize())
 
 def get_determiner(quantity):
   """Return a randomly chosen determiner. A determiner is
