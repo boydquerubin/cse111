@@ -1,12 +1,14 @@
 # Import the datetime class from the datetime
 # module so that it can be used in this program.
-from datetime import datetime
+from datetime import datetime, timedelta
 # Call the now() method to get the current
 # date and time as a datetime object from
 # the computer's operating system.
 current_date_and_time = datetime.now()
 # Use an f-string to print the current
 # day of the week and the current time.
+
+return_by = current_date_and_time + timedelta(days=30)
 
 import csv
 
@@ -55,7 +57,16 @@ def main():
                     subtotal += total_item_price
                     tax = subtotal * .06
                     grand_total = subtotal + tax    
-        
+            
+        print(f"Number of items: {items}")
+        print(f"Subtotal: ${subtotal:.2f}")
+        print(f"Tax: ${tax:.2f}")
+        print(f"Total: ${grand_total:.2f}")
+        print("Thank you for shopping at Albertsons.")
+        print(f"{current_date_and_time:%c}")
+        # Exceeding the requirements
+        print(f"Return by date: {return_by:%a %b %d %Y} at 9:00PM")
+
     except FileNotFoundError as not_found_err:
         print(not_found_err)
 
@@ -64,14 +75,6 @@ def main():
 
     except KeyError as key_err:
         print(type(key_err).__name__, key_err)
-            
-    # print(f"{request_file}")
-    print(f"Number of items: {items}")
-    print(f"Subtotal: ${subtotal:.2f}")
-    print(f"Tax: ${tax:.2f}")
-    print(f"Total: ${grand_total:.2f}")
-    print("Thank you for shopping at Albertsons.")
-    print(f"{current_date_and_time:%c}")
 
 def read_dictionary(filename, key_column_index):
     """
