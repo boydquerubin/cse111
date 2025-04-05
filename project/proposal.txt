@@ -1,0 +1,70 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+1. What is the title of your program?
+Workout Generator App
+
+2. What real-world problem will your program address or help to solve?
+A lot of people want to work out regularly but don’t always know what to do each day.
+This program takes the guesswork out by generating a solid workout plan based on the day of the week.
+It helps keep things simple, consistent, and makes sure you hit all the major muscle groups throughout the week.
+
+3. What will you learn from developing this program?
+- How to structure a Python program using reusable functions.
+- How to use data structures like lists and dictionaries to organize information.
+- How to use conditionals and randomization to generate customized outputs.
+- How to test functions and validate expected outcomes.
+
+4. What Python modules will your program use?
+
+    (Some examples are: csv, datetime, functools, matplotlib, math,
+    pandas, pytest, random, requests, and tkinter.)
+
+csv - to store and pull from the data workouts
+
+random – to randomly choose workouts for the day
+
+datetime – to auto-detect the current day and generate the workout accordingly, and give suggestions
+
+pytest – for testing functions 
+
+5. List the names of functions you will need?
+
+    (Remember that the most reusable functions don't get user input and
+    don't print results but instead have parameters and return a result.
+    Functions that get user input and print results are important and do
+    useful work but are not easily reusable.)
+
+    (Remember also that it's hard to test functions that get user input
+    and print results. It's easy to test functions that don't get user
+    input and don't print results but instead have parameters and return
+    a result. Therefore, you should write most of your program functions
+    to have parameters and return a result.)
+
+get_day() – returns current day of the week
+get_workouts_for_day(day) – returns list of workouts based on the day
+generate_workout(workout_list, count) – randomly selects a given number of workouts
+display_workout(day, selected_workouts) – prints the final workout in a clean format
+main() – the main driver of the program
+
+*self-imposed exceeding requirements:
+generate_biceps_and_triceps(biceps_list, triceps_list) – selects 3 of each
+
+generate_full_body(workouts_dict) – selects 2 from each muscle group
+
+
+6. List the names of the test functions you will write.
+
+test_generate_workout()
+test_generate_biceps_and_triceps()
+test_generate_full_body()
+test_get_workouts_for_day()
+
