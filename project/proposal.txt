@@ -29,11 +29,8 @@ It helps keep things simple, consistent, and makes sure you hit all the major mu
     pandas, pytest, random, requests, and tkinter.)
 
 csv - to store and pull from the data workouts
-
 random – to randomly choose workouts for the day
-
 datetime – to auto-detect the current day and generate the workout accordingly, and give suggestions
-
 pytest – for testing functions 
 
 5. List the names of functions you will need?
