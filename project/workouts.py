@@ -7,11 +7,21 @@ WORKOUT_MUSCLE_GROUP_INDEX = 1
 WORKOUT_INDEX = 2
 
 def main():
-    print("Workout Generator")
-    day = get_day()
-    today_workouts = get_workouts_for_day(day)
-    randomized = generate_workout(today_workouts, 6)
-    display_workout(day, randomized)
+    try:
+        print("Workout Generator")
+        day = get_day()
+        today_workouts = get_workouts_for_day(day)
+        randomized = generate_workout(today_workouts, 6)
+        display_workout(day, randomized)
+
+    except FileNotFoundError as not_found_err:
+        print(not_found_err)
+
+    except PermissionError as perm_err:
+        print(perm_err)
+
+    except KeyError as key_err:
+        print(type(key_err).__name__, key_err)
 
 def get_day():
     today = datetime.today()
